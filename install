@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#
+# bootstrap installs things.
+
+echo ''
+echo 'Beginning dotfiles installation'
+
+# find the installers and run them iteratively
+for installer in $(find . -name "*install.sh"); do
+  echo ''
+  echo "Running ${installer}"
+  sh -c "${installer}"
+done
+
+echo ''
+echo 'Completed dotfiles installation'
