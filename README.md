@@ -11,3 +11,9 @@ cd ~
 git clone git@github.com:codytwinton/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
+
+## Notes
+
+### Thanks
+
+* [@mscoutermarsh](https://github.com/mscoutermarsh/dotfiles)
