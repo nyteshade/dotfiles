@@ -2,6 +2,11 @@
 #
 # bootstrap installs things.
 
+DOTFILES_ROOT=$(pwd -P)
+
+set -e
+
+echo ''
 echo ''
 echo 'Beginning dotfiles installation'
 
@@ -12,5 +17,14 @@ for installer in $(find . -name "*install.sh"); do
   sh -c "${installer}"
 done
 
+read -p 'Where would you like symlink for your dotfiles dir to be stored? (e.g. ~/Developer) ' dot_sym_dir
+
+echo ''
+echo "installing /dotfiles symlink here: $dot_sym_dir"
+
+ln -s ~/.dotfiles "$dot_sym_dir/dotfiles"
+
 echo ''
 echo 'Completed dotfiles installation'
+echo ''
+echo ''
