@@ -16,4 +16,4 @@ cd ~/.dotfiles
 
 ### Thanks
 
-* [@mscoutermarsh](https://github.com/mscoutermarsh/dotfiles)
+* [github.com/mscoutermarsh/dotfiles](https://github.com/mscoutermarsh/dotfiles)
