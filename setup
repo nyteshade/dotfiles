@@ -4,7 +4,7 @@
 
 DOTFILES_ROOT=$(pwd -P)
 
-# set -e
+set -e
 
 echo ''
 echo ''
@@ -17,29 +17,12 @@ fi
 
 brew bundle
 
-git config --global color.ui true
-
-echo ''
-echo "Let's setup Git"
-
-read -p 'Full Name: ' name
-
-git config --global user.name $name
-
-read -p 'Email: ' email
-
-read test
-
-git config --global user.email $email
-
-
 # find the installers and run them iteratively
 for installer in $(find . -name "*install.sh"); do
   echo ''
   echo "Running ${installer}"
   sh -c "${installer}"
 done
-
 
 echo ''
 echo 'Completed dotfiles installation'

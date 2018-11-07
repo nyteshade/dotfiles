@@ -10,7 +10,7 @@ Clone this repo into your home directory:
 cd ~
 git clone git@github.com:codytwinton/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-./install
+./setup
 ```
 
 ## Notes
