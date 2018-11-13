@@ -4,4 +4,4 @@ echo ''
 echo 'Installing Vim'
 
 rm ~/.vimrc
-ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
+ln -s ~/.dotfiles/vim/symlink.vimrc ~/.vimrc

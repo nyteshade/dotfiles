@@ -1,3 +1,5 @@
 echo 'Installing Xcode'
 
-xcode-select --install
+if [[ "$(xcode-select -p)" == "" ]]; then
+  xcode-select --install
+fi
