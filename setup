@@ -10,6 +10,11 @@ echo ''
 echo ''
 echo 'Beginning dotfiles installation'
 
+if [ "$(id -u)" == "0" ]; then
+  echo "FAILURE: This script must not be run as root"
+  exit 1
+fi
+
 # find the installers and run them iteratively
 for installer in $(find . -name "*install.sh"); do
   echo ''
