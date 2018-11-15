@@ -35,6 +35,14 @@ fi
 
 brew bundle
 
+if `gem list bundler -i`; then 
+  echo "Bundler gem is installed!";
+else
+  gem install bundler
+fi
+
+bundle install --system
+
 echo ''
 echo 'Completed dotfiles installation'
 echo ''
