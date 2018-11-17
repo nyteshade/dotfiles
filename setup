@@ -23,27 +23,6 @@ for installer in $(find . -name "*install.sh"); do
 done
 
 echo ''
-echo 'Setting up Homebrew'
-
-if ! [ -x "$(command -v brew)" ]; then
-  echo ''
-  echo 'Installing Homebrew'
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-  brew upgrade
-fi
-
-brew bundle
-
-if `gem list bundler -i`; then 
-  echo "Bundler gem is installed!";
-else
-  gem install bundler
-fi
-
-bundle install --system
-
-echo ''
 echo 'Completed dotfiles installation'
 echo ''
 echo ''
