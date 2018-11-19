@@ -1,8 +1,17 @@
-brew "go", args: ["cross-compile-common"]
-brew "ruby"
-brew "rbenv"
-brew "ruby-build"
+# Taps
+
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+# Brews
+
 brew "clang-format"
+brew "go", args: ["cross-compile-common"]
 brew "mint"
-tap "ibm-swift/kitura"
-brew "kitura"
+brew "node"
+brew "openssl"
+brew "python"
+brew "rbenv"
+brew "ruby", link: true
+brew "ruby-build"
+brew "xctool"
