@@ -15,3 +15,6 @@ brew "rbenv"
 brew "ruby", link: true
 brew "ruby-build"
 brew "xctool"
+
+brew "swiftlint"
+brew "carthage"
