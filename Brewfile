@@ -14,6 +14,7 @@ brew "python"
 brew "rbenv"
 brew "ruby", link: true
 brew "ruby-build"
+brew "shellcheck"
 brew "xctool"
 
 brew "swiftlint"
