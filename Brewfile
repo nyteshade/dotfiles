@@ -29,7 +29,7 @@ brew "swiftlint"
 brew "xctool"
 cask "firefox"
 cask "google-chrome"
-cask "java" unless system "/usr/libexec/java_home --failfast"
+cask "java"
 mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
 mas "Be Focused", id: 973134470
