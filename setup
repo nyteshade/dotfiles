@@ -2,27 +2,44 @@
 #
 # bootstrap installs things.
 
-DOTFILES_ROOT=$(pwd -P)
+# --------------
+# Functions
+# --------------
 
-set -e
+main() {
+  DOTFILES_ROOT=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 
-echo ''
-echo ''
-echo 'Beginning dotfiles installation'
+  if [ "$(dirname "$DOTFILES_ROOT")" != "$HOME" ]; then
+    echo "Must have .dotfiles/ installed in home directory"
+    exit 1
+  fi
 
-if [ "$(id -u)" == "0" ]; then
-  echo "FAILURE: This script must not be run as root"
-  exit 1
-fi
+  if [ "$(id -u)" == "0" ]; then
+    echo "FAILURE: This script must not be run as root"
+    exit 1
+  fi
 
-# find the installers and run them iteratively
-for installer in $(find . -name "*install.sh"); do
+  set -e
+
   echo ''
-  echo "Running ${installer}"
-  sh -c "${installer}"
-done
+  echo ''
+  echo 'Beginning dotfiles installation'
 
-echo ''
-echo 'Completed dotfiles installation'
-echo ''
-echo ''
+  # find the installers and run them iteratively
+  for installer in $(find . -name "*install.sh"); do
+    echo ''
+    echo "Running ${installer}"
+    sh -c "${installer}"
+  done
+
+  echo ''
+  echo 'Completed dotfiles installation'
+  echo ''
+  echo ''
+}
+
+# --------------
+# Main Script
+# --------------
+
+main "$@"
