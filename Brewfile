@@ -6,6 +6,8 @@ brew "carthage"
 brew "clang-format"
 # Open source programming language to build simple/reliable/efficient software
 brew "go", args: ["cross-compile-common"]
+# Mac App Store command-line interface
+brew "mas"
 # Dependency manager that installs and runs Swift command-line tool packages
 brew "mint"
 # Platform built on V8 to build network applications
@@ -24,3 +26,12 @@ brew "shellcheck"
 brew "swiftlint"
 # Drop-in replacement for xcodebuild with a few extra features
 brew "xctool"
+# Mac Apps
+mas "1Password 7", id: 1333542190
+mas "AdBlock", id: 1402042596
+mas "Be Focused", id: 973134470
+mas "OverPicture", id: 1188020834
+mas "Slack", id: 803453959
+mas "Swiftify for Xcode", id: 1183412116
+mas "Trello", id: 1278508951
+mas "Unsplash Wallpapers", id: 1284863847
