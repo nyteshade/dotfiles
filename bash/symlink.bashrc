@@ -13,3 +13,6 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 # Profile Values
 # if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# added by travis gem
+[ -f /Users/codytwinton/.travis/travis.sh ] && source /Users/codytwinton/.travis/travis.sh
