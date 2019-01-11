@@ -28,10 +28,12 @@ brew "swiftlint"
 # Drop-in replacement for xcodebuild with a few extra features
 brew "xctool"
 cask "alfred"
+cask "boom-3d"
 cask "dropbox"
 cask "firefox"
 cask "google-chrome"
 cask "java"
+cask "postman"
 cask "visual-studio-code"
 mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
