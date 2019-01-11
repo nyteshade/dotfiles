@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>077D7055-0D2D-4C86-BFB1-0BC58DFE7E3E</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>fbobjc</string>
+			<key>text</key>
+			<string>Code Search[fbobjc] for {query}</string>
+			<key>url</key>
+			<string>https://our.intern.facebook.com/intern/codesearch/?q=repo%3Afbobjc%20{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>1D4FC450-DC9E-47BA-8E38-F87BE95C6EC9</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>www</string>
+			<key>text</key>
+			<string>Code Search[www] for {query}</string>
+			<key>url</key>
+			<string>https://our.intern.facebook.com/intern/codesearch/?q=repo%3Awww%20{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>1E4F1B5A-67D6-45FA-BE0B-31713615F607</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>businesssdk</string>
+			<key>text</key>
+			<string>Code Search[business-sdk] for {query}</string>
+			<key>url</key>
+			<string>https://our.intern.facebook.com/intern/codesearch/?q=repo%3Abusiness-sdk%20{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>33B0F74B-F6C9-4EC5-9AB7-0C26D0388BC1</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>b</string>
+			<key>text</key>
+			<string>Open bunnylol for '{query}'</string>
+			<key>url</key>
+			<string>https://our.intern.facebook.com/intern/bunny/?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>648FEDDF-421F-4007-92D3-E883F1501405</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>fbsource</string>
+			<key>text</key>
+			<string>Code Search[fbsource] for {query}</string>
+			<key>url</key>
+			<string>https://our.intern.facebook.com/intern/bunny/?q=repo%3Afbsource%20{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>676E3DF1-4211-4B90-8352-031C930C113D</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>bunnylol</string>
+			<key>text</key>
+			<string>Open bunnylol for '{query}'</string>
+			<key>url</key>
+			<string>https://our.intern.facebook.com/intern/bunny/?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>6C12DD43-D89C-4712-875E-4A510A0B695C</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>shellcheck</string>
+			<key>spaces</key>
+			<string>-</string>
+			<key>text</key>
+			<string>Show shellcheck for '{query}'</string>
+			<key>url</key>
+			<string>https://github.com/koalaman/shellcheck/wiki/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>9B0975D6-B19E-4636-8859-220DF5269D1C</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>cs</string>
+			<key>text</key>
+			<string>Code Search[monorepo] for {query}</string>
+			<key>url</key>
+			<string>https://our.intern.facebook.com/intern/codesearch/?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>AFA16207-00A3-4E41-8883-2C548382B3BF</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>urban</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Open Urban Dictionary for '{query}'</string>
+			<key>url</key>
+			<string>https://www.urbandictionary.com/define.php?term={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>D0F85982-2F2F-4626-B25F-AD8E331BCBBD</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>sv</string>
+			<key>text</key>
+			<string>Open Sitevar for '{query}'</string>
+			<key>url</key>
+			<string>https://our.intern.facebook.com/intern/bunny/?q=sv%20{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E63FFD9F-48C8-459C-A2E8-853BC64ECD07</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>reddit</string>
+			<key>text</key>
+			<string>Open Subreddit '{query}'</string>
+			<key>url</key>
+			<string>https://www.reddit.com/r/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>FCF74D94-40FB-4127-831D-A0216F974F2A</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>github</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Search GitHub for '{query}'</string>
+			<key>url</key>
+			<string>https://github.com/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

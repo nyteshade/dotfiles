@@ -27,6 +27,7 @@ brew "shellcheck"
 brew "swiftlint"
 # Drop-in replacement for xcodebuild with a few extra features
 brew "xctool"
+cask "alfred"
 cask "firefox"
 cask "google-chrome"
 cask "java"
