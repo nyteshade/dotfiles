@@ -30,6 +30,7 @@ brew "xctool"
 cask "firefox"
 cask "google-chrome"
 cask "java"
+cask "visual-studio-code"
 mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
 mas "Be Focused", id: 973134470
