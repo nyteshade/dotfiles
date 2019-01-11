@@ -29,7 +29,7 @@ main() {
   for installer in $(find . -name "*install.sh"); do
     echo ''
     echo "Running ${installer}"
-    sh -c "${installer}"
+    sh "${installer}"
   done
 
   echo ''
