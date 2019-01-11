@@ -34,6 +34,7 @@ cask "firefox"
 cask "google-chrome"
 cask "java"
 cask "postman"
+cask "sourcetree"
 cask "visual-studio-code"
 mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
