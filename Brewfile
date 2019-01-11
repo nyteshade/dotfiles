@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/core"
 # Decentralized dependency manager for Cocoa
 brew "carthage"
@@ -26,7 +27,9 @@ brew "shellcheck"
 brew "swiftlint"
 # Drop-in replacement for xcodebuild with a few extra features
 brew "xctool"
-# Mac Apps
+cask "firefox"
+cask "google-chrome"
+cask "java" unless system "/usr/libexec/java_home --failfast"
 mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
 mas "Be Focused", id: 973134470
