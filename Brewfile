@@ -13,6 +13,8 @@ brew "mas"
 brew "mint"
 # Platform built on V8 to build network applications
 brew "node"
+# SSL/TLS cryptography library
+brew "openssl"
 # Interpreted, interactive, object-oriented programming language
 brew "python"
 # Install various Ruby versions and implementations
