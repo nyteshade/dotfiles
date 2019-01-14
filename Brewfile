@@ -1,29 +1,17 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
-# Open source programming language to build simple/reliable/efficient software
-brew "go", args: ["cross-compile-common"]
-# Mac App Store command-line interface
+brew "go"
 brew "mas"
-# Dependency manager that installs and runs Swift command-line tool packages
 brew "mint"
-# Platform built on V8 to build network applications
 brew "node"
-# SSL/TLS cryptography library
 brew "openssl"
-# Interpreted, interactive, object-oriented programming language
 brew "python"
-# Install various Ruby versions and implementations
 brew "ruby-build"
-# Ruby version manager
 brew "rbenv"
-# Powerful, clean, object-oriented scripting language
 brew "ruby", link: true
-# Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Drop-in replacement for xcodebuild with a few extra features
 brew "xctool"
 cask "alfred"
 cask "boom-3d"
@@ -43,3 +31,4 @@ mas "Slack", id: 803453959
 mas "Swiftify for Xcode", id: 1183412116
 mas "Trello", id: 1278508951
 mas "Unsplash Wallpapers", id: 1284863847
+mas "Xcode", id: 497799835
