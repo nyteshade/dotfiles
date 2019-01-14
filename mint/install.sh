@@ -1,10 +1,34 @@
 #!/bin/sh
 
-echo ''
-echo 'Setting up Mint'
+# --------------
+# Functions
+# --------------
 
-mint bootstrap
+main() {
+  echo ''
+  echo 'Setting up Mint'
 
-while read mint_dep; do
-  mint install "$mint_dep"
-done <Mintfile
+  case "$1" in
+  "install") install ;;
+  "update") update ;;
+  *) echo "Unsupported" ;;
+  esac
+}
+
+install() {
+  mint bootstrap
+
+  while read -r mint_dep; do
+    mint install "$mint_dep"
+  done <Mintfile
+}
+
+update() {
+  install
+}
+
+# --------------
+# Main Script
+# --------------
+
+main "$@"

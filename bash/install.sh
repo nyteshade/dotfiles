@@ -1,10 +1,34 @@
 #!/bin/sh
 
-echo ''
-echo 'Installing Bash'
+# --------------
+# Functions
+# --------------
 
-test -d "${GOPATH}" || mkdir "${GOPATH}"
-test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+main() {
+  echo ''
+  echo 'Installing Bash'
 
-rm ~/.bashrc
-ln -s ~/.dotfiles/bash/symlink.bashrc ~/.bashrc
+  case "$1" in
+  "install") install ;;
+  "update") update ;;
+  *) echo "Unsupported" ;;
+  esac
+}
+
+install() {
+  test -d "${GOPATH}" || mkdir "${GOPATH}"
+  test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
+  rm ~/.bashrc
+  ln -s ~/.dotfiles/bash/symlink.bashrc ~/.bashrc
+}
+
+update() {
+  install
+}
+
+# --------------
+# Main Script
+# --------------
+
+main "$@"

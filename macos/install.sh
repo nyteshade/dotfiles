@@ -1,17 +1,50 @@
-echo 'Setting up macOS'
+#!/bin/sh
 
-# Screenshots
+# --------------
+# Functions
+# --------------
 
-SCREENSHOTDIR="${HOME}/Pictures/Screenshots"
+main() {
+  echo ''
+  echo 'Setting up macOS'
 
-test -d "${SCREENSHOTDIR}" || mkdir "${SCREENSHOTDIR}"
+  case "$1" in
+  "install") install ;;
+  "update") update ;;
+  *) echo "Unsupported" ;;
+  esac
+}
 
-defaults write com.apple.screencapture location $SCREENSHOTDIR
+install() {
+  # Screenshots
 
-# Dock Prefs
+  SCREENSHOTDIR="${HOME}/Pictures/Screenshots"
 
-defaults write com.apple.dock autohide -bool yes;
-defaults write com.apple.dock autohide-delay -float 0;
-defaults write com.apple.dock autohide-time-modifier -float 0.14999999999999999;
+  test -d "${SCREENSHOTDIR}" || mkdir "${SCREENSHOTDIR}"
 
-killall Dock
+  defaults write com.apple.screencapture location "$SCREENSHOTDIR"
+
+  # Dock Prefs
+
+  defaults write com.apple.dock autohide -bool yes;
+  defaults write com.apple.dock autohide-delay -float 0;
+  defaults write com.apple.dock autohide-time-modifier -float 0.14999999999999999;
+
+  killall Dock
+
+  # Xcode
+
+  if [[ "$(xcode-select -p)" == "" ]]; then
+    xcode-select --install
+  fi
+}
+
+update() {
+  install
+}
+
+# --------------
+# Main Script
+# --------------
+
+main "$@"
