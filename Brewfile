@@ -1,8 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-# Decentralized dependency manager for Cocoa
-brew "carthage"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Open source programming language to build simple/reliable/efficient software
@@ -25,8 +23,6 @@ brew "rbenv"
 brew "ruby", link: true
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Tool to enforce Swift style and conventions
-brew "swiftlint"
 # Drop-in replacement for xcodebuild with a few extra features
 brew "xctool"
 cask "alfred"
