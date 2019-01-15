@@ -21,6 +21,9 @@ install() {
 
   rm ~/.bashrc
   ln -s ~/.dotfiles/bash/symlink.bashrc ~/.bashrc
+
+  rm ~/.bash_profile
+  ln -s ~/.dotfiles/bash/symlink.bash_profile ~/.bash_profile
 }
 
 update() {
