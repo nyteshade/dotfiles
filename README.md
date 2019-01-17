@@ -18,3 +18,7 @@ cd ~/.dotfiles
 ### Thanks
 
 * [github.com/mscoutermarsh/dotfiles](https://github.com/mscoutermarsh/dotfiles)
+
+### Check Out
+
+* [github.com/lra/mackup](https://github.com/lra/mackup)
