@@ -1,0 +1,21 @@
+{
+    // Disable automatic updates.
+    "update.channel": "none",
+
+    // Disable telemetry to Microsoft by default:
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
+    // "big-dig.connection.profiles": {
+        // Add custom connection profiles here.
+        // Each connection profile should be a key-value pair of the remote hostname
+        // and an object containing at least "folders".
+    // },
+    // Disable PHP validation in favor of Hack.
+    "php.validate.enable": false,
+
+    // These are Atom's defaults and seem to save a lot
+    // of nits about trailing whitespace on diffs.
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true
+}
