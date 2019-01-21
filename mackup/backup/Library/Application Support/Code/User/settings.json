@@ -1,7 +1,6 @@
 {
   "workbench.colorTheme": "Atom One Dark",
   "window.zoomLevel": 0,
-  "markdown.extension.toc.unorderedList.marker": "*",
   "editor.tabSize": 2,
   "editor.detectIndentation": true,
   "[markdown]": {
@@ -9,15 +8,11 @@
     "editor.tabSize": 2
   },
   "markdown.extension.toc.levels": "2..6",
-  "csharp.format.enable": false,
+  "markdown.extension.toc.unorderedList.marker": "-",
   "sync.gist": "b692ffdc0bec9fd495edc8fa2fd18e72",
-  "sync.lastUpload": "2018-06-01T17:48:37.439Z",
   "sync.autoDownload": false,
   "sync.autoUpload": false,
-  "sync.lastDownload": "2018-05-24T21:01:58.878Z",
   "sync.forceDownload": false,
-  "sync.host": "",
-  "sync.pathPrefix": "",
   "sync.quietSync": false,
   "sync.askGistName": false,
   "sync.removeExtensions": true,
