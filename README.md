@@ -6,7 +6,7 @@ Config Files
 
 Clone this repo into your home directory:
 
-```bash
+```sh
 cd ~
 git clone git@github.com:codytwinton/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
