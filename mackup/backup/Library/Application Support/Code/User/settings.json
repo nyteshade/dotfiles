@@ -24,7 +24,7 @@
   "workbench.startupEditor": "newUntitledFile",
   "editor.fontSize": 13,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [80],
+  "editor.rulers": [80, 120],
   "terminal.external.osxExec": "iTerm.app",
   "window.nativeTabs": true,
   "editor.minimap.maxColumn": 80,
