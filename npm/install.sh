@@ -20,6 +20,7 @@ install() {
 }
 
 update() {
+  npm install -g npm
   install
 }
 
