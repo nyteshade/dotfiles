@@ -17,6 +17,7 @@ main() {
 
 install() {
   npm install -g prettier
+  npm install -g bash-language-server
 }
 
 update() {
