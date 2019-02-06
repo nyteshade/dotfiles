@@ -19,6 +19,7 @@ brew "ruby-build"
 brew "rbenv"
 brew "ruby", link: true
 brew "shellcheck"
+brew "shfmt"
 brew "vitorgalvao/tiny-scripts/cask-repair"
 brew "xctool"
 cask "alfred"
