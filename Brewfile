@@ -30,6 +30,7 @@ cask "google-chrome"
 cask "iterm2"
 cask "postman"
 cask "sourcetree"
+cask "typora"
 cask "visual-studio-code"
 mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
