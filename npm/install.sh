@@ -1,9 +1,12 @@
 #!/bin/sh
 
+# shellcheck disable=SC2039
+
 # --------------
 # Functions
 # --------------
 
+# Main
 main() {
   echo ''
   echo 'Setting up NPM'
@@ -15,11 +18,20 @@ main() {
   esac
 }
 
+# Install
 install() {
-  npm install -g prettier
-  npm install -g bash-language-server
+  local global_deps=(
+    "prettier"
+    "bash-language-server"
+    "@google/clasp"
+  )
+
+  for dep in "${global_deps[@]}"; do
+    npm install "$dep" -g
+  done
 }
 
+# Update
 update() {
   npm install -g npm
   install
