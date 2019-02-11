@@ -21,9 +21,9 @@ main() {
 # Install
 install() {
   local global_deps=(
-    "prettier"
-    "bash-language-server"
     "@google/clasp"
+    "bash-language-server"
+    "prettier"
   )
 
   for dep in "${global_deps[@]}"; do
