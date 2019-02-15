@@ -144,6 +144,7 @@ GEM
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
+    parslet (1.8.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     powerpack (0.1.2)
@@ -204,6 +205,10 @@ GEM
       launchy (~> 2.1)
       pusher-client (~> 0.4)
       typhoeus (~> 0.6, >= 0.6.8)
+    travis-conditions (1.0.7)
+      parslet (~> 1.8)
+      travis-env_vars (~> 0.1)
+    travis-env_vars (0.1.1)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
     tzinfo (1.2.5)
@@ -231,6 +236,7 @@ DEPENDENCIES
   jekyll
   solargraph
   travis
+  travis-conditions
 
 BUNDLED WITH
    1.17.2
