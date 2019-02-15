@@ -13,6 +13,7 @@
   "markdown.extension.toc.unorderedList.marker": "-",
   "markdownlint.config": {
     "MD002": false,
+    "MD024": false,
     "MD041": false
   },
   "sync.askGistName": false,
