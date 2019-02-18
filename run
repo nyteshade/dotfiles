@@ -10,7 +10,7 @@ main() {
   DOTFILES_ROOT=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 
   if [ "$1" == "prepare" ]; then
-    sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin
+    sudo chown -R "$(whoami)" /usr/local/lib /usr/local/sbin
     return
   fi
 
