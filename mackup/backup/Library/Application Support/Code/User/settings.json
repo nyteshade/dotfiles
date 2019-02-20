@@ -7,7 +7,8 @@
   "editor.renderWhitespace": "boundary",
   "editor.rulers": [120, 80],
   "files.associations": {
-    "*.podspec": "ruby"
+    "*.podspec": "ruby",
+    "CODEOWNERS": "ignore"
   },
   "markdown.extension.toc.levels": "2..6",
   "markdown.extension.toc.unorderedList.marker": "-",
