@@ -17,6 +17,7 @@
     "MD024": false,
     "MD041": false
   },
+  "shellcheck.customArgs": ["-x"],
   "sync.askGistName": false,
   "sync.autoDownload": false,
   "sync.autoUpload": false,
