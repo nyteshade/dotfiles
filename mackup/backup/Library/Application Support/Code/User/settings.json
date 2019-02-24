@@ -5,7 +5,7 @@
   "editor.formatOnSave": true,
   "editor.minimap.maxColumn": 80,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [120, 80],
+  "editor.rulers": [80, 120],
   "files.associations": {
     "*.podspec": "ruby",
     "CODEOWNERS": "ignore"
