@@ -18,6 +18,7 @@
     "MD041": false
   },
   "shellcheck.customArgs": ["-x"],
+  "shellformat.flag": "-s -bn",
   "sync.askGistName": false,
   "sync.autoDownload": false,
   "sync.autoUpload": false,
