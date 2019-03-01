@@ -7,7 +7,7 @@
   "editor.renderWhitespace": "boundary",
   "editor.rulers": [80, 120],
   "files.associations": {
-    "*.clang-format": "yaml",
+    ".clang-format": "yaml",
     "*.podspec": "ruby",
     "CODEOWNERS": "ignore"
   },
