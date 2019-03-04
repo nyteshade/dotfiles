@@ -9,10 +9,7 @@
 main() {
   DOTFILES_ROOT=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 
-  if [ "$1" == "prepare" ]; then
-    sudo chown -R "$(whoami)" /usr/local/lib /usr/local/sbin
-    return
-  fi
+  sudo chown -R "$(whoami)" /usr/local/lib /usr/local/sbin
 
   if [ "$(dirname "$DOTFILES_ROOT")" != "$HOME" ]; then
     echo "Must have .dotfiles/ installed in home directory"
@@ -35,22 +32,22 @@ install() {
   set -e
 
   # find the installers and run them iteratively
-  for installer in $(find . -name "*install.sh"); do
+  while IFS= read -r -d '' installer; do
     echo ''
     echo "Running ${installer}"
     sh "${installer}" install
-  done
+  done < <(find . -name "*install.sh" -print0)
 }
 
 update() {
   set -e
 
   # find the installers and run them iteratively
-  for installer in $(find . -name "*install.sh"); do
+  while IFS= read -r -d '' installer; do
     echo ''
     echo "Running ${installer}"
     sh "${installer}" update
-  done
+  done < <(find . -name "*install.sh" -print0)
 }
 
 # --------------
