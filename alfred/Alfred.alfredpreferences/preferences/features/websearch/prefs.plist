@@ -13,7 +13,7 @@
 			<key>text</key>
 			<string>Code Search[fbobjc] for {query}</string>
 			<key>url</key>
-			<string>https://our.intern.facebook.com/intern/codesearch/?q=repo%3Afbobjc%20{query}</string>
+			<string>https://our.internmc.facebook.com/intern/codesearch/?q=repo%3Afbobjc%20{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -39,7 +39,7 @@
 			<key>text</key>
 			<string>Code Search[business-sdk] for {query}</string>
 			<key>url</key>
-			<string>https://our.intern.facebook.com/intern/codesearch/?q=repo%3Abusiness-sdk%20{query}</string>
+			<string>https://our.internmc.facebook.com/intern/codesearch/?q=repo%3Abusiness-sdk%20{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -52,7 +52,7 @@
 			<key>text</key>
 			<string>Open bunnylol for '{query}'</string>
 			<key>url</key>
-			<string>https://our.intern.facebook.com/intern/bunny/?q={query}</string>
+			<string>https://our.internmc.facebook.com/intern/bunny/?q={query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -65,7 +65,7 @@
 			<key>text</key>
 			<string>Code Search[fbsource] for {query}</string>
 			<key>url</key>
-			<string>https://our.intern.facebook.com/intern/bunny/?q=repo%3Afbsource%20{query}</string>
+			<string>https://our.internmc.facebook.com/intern/bunny/?q=repo%3Afbsource%20{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -78,7 +78,7 @@
 			<key>text</key>
 			<string>Open bunnylol for '{query}'</string>
 			<key>url</key>
-			<string>https://our.intern.facebook.com/intern/bunny/?q={query}</string>
+			<string>https://our.internmc.facebook.com/intern/bunny/?q={query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -119,7 +119,7 @@
 			<key>text</key>
 			<string>Code Search[monorepo] for {query}</string>
 			<key>url</key>
-			<string>https://our.intern.facebook.com/intern/codesearch/?q={query}</string>
+			<string>https://our.internmc.facebook.com/intern/codesearch/?q={query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
