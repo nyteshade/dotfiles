@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+#
+# Testing the run value
+
+# --------------
+# Imports
+# --------------
+
+. "scripts/globals.sh"
+. "scripts/logger.sh"
+
+# --------------
+# Functions
+# --------------
+
+# Main
+main() {
+  test_globals
+}
+
+# --------------
+# Tests
+# --------------
+
+test_globals() {
+  # Arrange
+  local test_failures=$((0))
+
+  # Act
+  log_test_begin
+
+  # Assert
+  if [ "$(dirname "$DOTFILES_ROOT")" != "$HOME" ]; then
+    log_error "Must have .dotfiles/ installed in home directory, but set to: $DOTFILES_ROOT"
+    ((test_failures += 1))
+  fi
+
+  log_test_results $test_failures
+}
+
+# --------------
+# Main Script
+# --------------
+
+main "$@"

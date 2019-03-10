@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 #
-# bootstrap installs things.
+# Main Script
+
+# --------------
+# Imports
+# --------------
+
+. "scripts/globals.sh"
 
 # --------------
 # Functions
 # --------------
 
 main() {
-  DOTFILES_ROOT=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
-
-  sudo chown -R "$(whoami)" /usr/local/lib /usr/local/sbin
-
   if [ "$(dirname "$DOTFILES_ROOT")" != "$HOME" ]; then
     echo "Must have .dotfiles/ installed in home directory"
     exit 1
@@ -21,32 +23,20 @@ main() {
     exit 1
   fi
 
-  case "$1" in
-  "install") install ;;
-  "update") update ;;
-  *) echo "Unsupported" ;;
-  esac
-}
+  if [ "$1" != "install" ] && [ "$1" != "update" ]; then
+    echo "$1 is unsupported"
+    exit 1
+  fi
 
-install() {
   set -e
+
+  sudo chown -R "$(whoami)" /usr/local/lib /usr/local/sbin
 
   # find the installers and run them iteratively
   while IFS= read -r -d '' installer; do
     echo ''
     echo "Running ${installer}"
-    sh "${installer}" install
-  done < <(find . -name "*install.sh" -print0)
-}
-
-update() {
-  set -e
-
-  # find the installers and run them iteratively
-  while IFS= read -r -d '' installer; do
-    echo ''
-    echo "Running ${installer}"
-    sh "${installer}" update
+    sh "${installer}" "$1"
   done < <(find . -name "*install.sh" -print0)
 }
 

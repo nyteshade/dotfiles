@@ -10,7 +10,12 @@ Clone this repo into your home directory:
 cd ~
 git clone git@github.com:codytwinton/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
+
+chmod +x run
 ./run install
+
+chmod +x run_tests
+./run_tests
 ```
 
 ## Notes
