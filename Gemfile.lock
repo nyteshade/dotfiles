@@ -48,7 +48,7 @@ GEM
     cocoapods-try (1.1.0)
     colorator (1.1.0)
     colored2 (3.1.2)
-    concurrent-ruby (1.1.4)
+    concurrent-ruby (1.1.5)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
