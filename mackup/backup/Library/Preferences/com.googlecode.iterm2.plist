@@ -412,7 +412,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>2829 126 606 469 2560 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>404 334 796 486 0 0 1680 1027 </string>
+	<string>561 541 796 486 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 520 650 507 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -1203,7 +1203,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/codytwinton/.dotfiles/iterm2</string>
+	<string>/Users/codytwinton/.dotfiles/mackup/backup/Library/Preferences</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
