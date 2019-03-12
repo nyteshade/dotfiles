@@ -134,7 +134,8 @@ mackup restore
 
 ### VSCode
 
-Install the [Code Settings Sync Extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+- Install the [Code Settings Sync Extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+- Sync Settings
 
 ### Alfred
 
