@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #
 # Main Script
+#
+# shellcheck disable=SC2039
 
 # --------------
 # Imports
@@ -35,7 +37,7 @@ main() {
   local install_paths=(
     "bash"
     "homebrew"
-    "gem"
+    "ruby"
   )
 
   for install_path in "${install_paths[@]}"; do

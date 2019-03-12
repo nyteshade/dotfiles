@@ -22,8 +22,6 @@ main() {
 install() {
   rm ~/.mackup.cfg
   ln -s ~/.dotfiles/mackup/backup/.mackup.cfg ~/.mackup.cfg
-
-  mackup restore
 }
 
 # Update
