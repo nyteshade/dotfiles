@@ -30,7 +30,8 @@ main() {
     exit 1
   fi
 
-  set -e
+  set -euo pipefail
+  IFS=$'\n\t'
 
   git submodule update --init
 
@@ -47,7 +48,7 @@ main() {
   done
 
   # find the installers and run them iteratively
-  while IFS= read -r -d '' installer; do
+  while read -r -d '' installer; do
     local already_installed=""
     for install_path in "${install_paths[@]}"; do
       if [[ $installer == *"$install_path"* ]]; then
