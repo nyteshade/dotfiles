@@ -124,3 +124,4 @@ chmod +x run_tests
 
 - [github.com/mscoutermarsh/dotfiles](https://github.com/mscoutermarsh/dotfiles)
 - [github.com/lra/mackup](https://github.com/lra/mackup)
+- [gorails.com/setup/osx/10.14-mojave](https://gorails.com/setup/osx/10.14-mojave)
