@@ -32,8 +32,32 @@ main() {
 
   sudo chown -R "$(whoami)" /usr/local/lib /usr/local/sbin
 
+  local install_paths=(
+    "homebrew"
+    "gem"
+    "bash"
+  )
+
+  for install_path in "${install_paths[@]}"; do
+    echo ''
+    echo "Running ${install_path}/install.sh"
+    sh "${install_path}/install.sh" "$1"
+  done
+
   # find the installers and run them iteratively
   while IFS= read -r -d '' installer; do
+    local already_installed=""
+    for install_path in "${install_paths[@]}"; do
+      if [[ $installer == *"$install_path"* ]]; then
+        already_installed="$install_path"
+        break
+      fi
+    done
+
+    if [[ -n $already_installed ]]; then
+      continue
+    fi
+
     echo ''
     echo "Running ${installer}"
     sh "${installer}" "$1"

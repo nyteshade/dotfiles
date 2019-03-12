@@ -120,6 +120,10 @@ chmod +x run_tests
 ./run_tests
 ```
 
+## Setup Unsplash
+
+- Enable
+
 ## Acknowledgement
 
 - [github.com/mscoutermarsh/dotfiles](https://github.com/mscoutermarsh/dotfiles)
