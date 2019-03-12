@@ -32,11 +32,13 @@ Config Files and Mac Setup
 - Modifier Keys
   - Caps Lock Key: Escape
 - Shortcuts
-  - iTerm.app
-    - Toggle Full Screen: ⌃⌘F
-  - Finder.app
-    - Get Info: ⌥⌘I
-    - Show Inspector: ⌘I
+  - Show Spotlight search: ⌃Space
+  - App Shortcuts
+    - iTerm.app
+      - Toggle Full Screen: ⌃⌘F
+    - Finder.app
+      - Get Info: ⌥⌘I
+      - Show Inspector: ⌘I
 
 ### Trackpad
 
@@ -128,18 +130,20 @@ Run:
 mackup restore
 ```
 
-## VSCode
+## Apps
+
+### VSCode
 
 Install the [Code Settings Sync Extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 
-## Apps
+### Alfred
 
-- 1Password
-- Alfred
-- SourceTree
-- Unsplash
+- General: Set Alfred Hotkey
+- Advanced: Set Preferences Directory
 
-## Acknowledgement
+### Brewfile Apps
+
+## Acknowledgements
 
 - [github.com/mscoutermarsh/dotfiles](https://github.com/mscoutermarsh/dotfiles)
 - [github.com/lra/mackup](https://github.com/lra/mackup)
