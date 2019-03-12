@@ -1,8 +1,95 @@
 # dotfiles
 
-Config Files
+Config Files and Mac Setup
 
-## Installation
+## Mac Preferences
+
+### General
+
+- Enable Dark Mode
+
+### Dock
+
+- Prefer tabs when opening documents: Always
+- Show recent applications in Dock: False
+
+### Mission Control
+
+- Automatically rearrange Spaces based on most recent use: False
+
+### Notifications
+
+- Notification Center sort order: Recents by App
+
+### Displays
+
+- Night Shift: Sunset to Sunrise
+
+### Keyboard
+
+- Keyboard
+  - Keyboard Backlight
+- Modifier Keys
+  - Caps Lock Key: Escape
+- Shortcuts
+  - iTerm.app
+    - Toggle Full Screen: ⌃⌘F
+  - Finder.app
+    - Get Info: ⌥⌘I
+    - Show Inspector: ⌘I
+
+### Trackpad
+
+- Point & Click
+  - Look up & data detectors: Tap with three fingers
+  - Secondary click: Click or tap with two fingers
+  - Tap to click: Tap with one finger
+  - Tracking speed (1...10): 6
+- More Gestures
+  - Swipe between pages: Swipe with three fingers
+  - Swipe between full-screen apps: Swipe left or right with four fingers
+  - Notification Center: True
+  - Mission Control: Swipe up with four fingers
+
+### Sound
+
+- Play sound effects through: Selected sound output device
+- Play feedback when volume is changed: True
+
+### iCloud
+
+- Sign In
+- Find my Mac (remove old machines)
+
+### Bluetooth
+
+- Show Bluetooth in menu bar
+
+### TouchID
+
+- Setup
+
+### Date & Time
+
+- Date options: Show date
+
+### Accessibility
+
+- Spring-loading delay: Short
+
+## Finder
+
+- Don't show items on desktop
+- New finder windows show Home folder
+- Open folders in tabs instead of new windows
+- Sidebar settings
+- Show all filename extensions
+
+## Messages
+
+- Enable Messages in iCloud
+
+## Installation of `.dotfiles`
 
 Clone this repo into your home directory:
 
@@ -18,12 +105,7 @@ chmod +x run_tests
 ./run_tests
 ```
 
-## Notes
-
-### Thanks
+## Acknowledgement
 
 - [github.com/mscoutermarsh/dotfiles](https://github.com/mscoutermarsh/dotfiles)
-
-### Check Out
-
 - [github.com/lra/mackup](https://github.com/lra/mackup)

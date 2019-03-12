@@ -30,6 +30,11 @@ install() {
   defaults write com.apple.dock autohide-delay -float 0
   defaults write com.apple.dock autohide-time-modifier -float 0.14999999999999999
 
+  # Keyboard
+
+  defaults write -g InitialKeyRepeat -int 15
+  defaults write -g KeyRepeat -int 2
+
   killall Dock
 
   # Xcode
