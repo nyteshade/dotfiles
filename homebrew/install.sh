@@ -8,6 +8,8 @@ main() {
   echo ''
   echo 'Setting up Homebrew'
 
+  sudo chown -R "$(whoami)" /usr/local/lib /usr/local/sbin
+
   if ! [ -x "$(command -v brew)" ]; then
     echo ''
     echo 'Installing Homebrew'

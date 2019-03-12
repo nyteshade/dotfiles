@@ -30,12 +30,12 @@ main() {
 
   set -e
 
-  sudo chown -R "$(whoami)" /usr/local/lib /usr/local/sbin
+  git submodule update --init
 
   local install_paths=(
+    "bash"
     "homebrew"
     "gem"
-    "bash"
   )
 
   for install_path in "${install_paths[@]}"; do

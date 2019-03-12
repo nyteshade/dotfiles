@@ -120,9 +120,24 @@ chmod +x run_tests
 ./run_tests
 ```
 
-## Setup Unsplash
+## Mackup
 
-- Enable
+Run:
+
+```sh
+mackup restore
+```
+
+## VSCode
+
+Install the [Code Settings Sync Extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+
+## Apps
+
+- 1Password
+- Alfred
+- SourceTree
+- Unsplash
 
 ## Acknowledgement
 
