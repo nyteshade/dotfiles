@@ -89,6 +89,21 @@ Config Files and Mac Setup
 
 - Enable Messages in iCloud
 
+## Git
+
+Run the following commands (replace your email)
+
+```sh
+ssh-keygen -t rsa -C "me@example.com"
+cat ~/.ssh/id_rsa.pub
+```
+
+Paste the result into [GitHub SSH Keys](https://github.com/settings/keys) and confirm it's working:
+
+```sh
+ssh -T git@github.com
+```
+
 ## Installation of `.dotfiles`
 
 Clone this repo into your home directory:
