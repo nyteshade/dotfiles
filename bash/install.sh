@@ -25,8 +25,8 @@ install() {
 
   rm ~/.bash_profile
 
-  if [ -f ~/.dotfiles/dotfiles_private/.bash_profile ]; then
-    ln -s ~/.dotfiles/dotfiles_private/.bash_profile ~/.bash_profile
+  if [ -f ~/.dotfiles/private/.bash_profile ]; then
+    ln -s ~/.dotfiles/private/.bash_profile ~/.bash_profile
   else
     ln -s ~/.dotfiles/bash/symlink.bash_profile ~/.bash_profile
   fi
