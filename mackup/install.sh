@@ -21,7 +21,7 @@ main() {
 # Install
 install() {
   rm ~/.mackup.cfg
-  ln -s ~/.dotfiles/.mackup.cfg ~/.mackup.cfg
+  ln -s ~/.dotfiles/private/mackup/.mackup.cfg ~/.mackup.cfg
 }
 
 # Update

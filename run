@@ -36,7 +36,6 @@ main() {
   git submodule update --init
 
   local install_paths=(
-    "bash"
     "homebrew"
     "ruby"
   )
