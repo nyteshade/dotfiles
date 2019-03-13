@@ -37,7 +37,8 @@ install() {
 update() {
   install
   gem install bundler
-  bundle update --system
+  bundle update
+  bundle install --system
 }
 
 # --------------
