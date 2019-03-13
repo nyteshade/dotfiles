@@ -27,6 +27,12 @@ install() {
   )
 
   for dep in "${global_deps[@]}"; do
+    if npm list -g "$dep" | grep -q "$dep"; then
+      if [ -z "$1" ]; then
+        continue
+      fi
+    fi
+
     npm install "$dep" -g
   done
 }
@@ -34,7 +40,7 @@ install() {
 # Update
 update() {
   npm install -g npm
-  install
+  install update
 }
 
 # --------------
