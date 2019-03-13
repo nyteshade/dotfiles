@@ -33,6 +33,7 @@ cask "postman"
 cask "sourcetree"
 cask "typora"
 cask "visual-studio-code"
+cask "workplace-chat"
 mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
 mas "Be Focused", id: 973134470

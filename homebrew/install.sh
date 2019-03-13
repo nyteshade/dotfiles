@@ -14,8 +14,6 @@ main() {
     echo ''
     echo 'Installing Homebrew'
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  else
-    brew upgrade
   fi
 
   case "$1" in
@@ -30,6 +28,7 @@ install() {
 }
 
 update() {
+  brew upgrade
   brew bundle
 }
 
