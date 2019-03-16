@@ -5,8 +5,11 @@
 # shellcheck disable=SC2039
 
 # --------------
-# Imports
+# Setup
 # --------------
+
+set -euo pipefail
+IFS=$'\n\t'
 
 . "scripts/globals.sh"
 
@@ -15,28 +18,19 @@
 # --------------
 
 main() {
-  if [ "$(dirname "$DOTFILES_ROOT")" != "$HOME" ]; then
-    echo "Must have .dotfiles/ installed in home directory"
-    exit 1
-  fi
-
   if [ "$(id -u)" == "0" ]; then
     echo "FAILURE: This script must not be run as root"
     exit 1
   fi
 
-  if [ "$1" != "install" ] && [ "$1" != "update" ]; then
-    echo "$1 is unsupported"
-    exit 1
-  fi
-
-  set -euo pipefail
-  IFS=$'\n\t'
+  COMMAND_TYPE=${1:-}
 
   git submodule update --init
 
+  install_homebrew
+  install_mackup
+
   local install_paths=(
-    "homebrew"
     "ruby"
   )
 
@@ -64,6 +58,34 @@ main() {
     echo "Running ${installer}"
     sh "${installer}" "$1"
   done < <(find . -name "*install.sh" -print0)
+}
+
+# --------------
+# Installs
+# --------------
+
+install_homebrew() {
+  echo 'Setting up Homebrew'
+
+  sudo chown -R "$(whoami)" /usr/local/lib /usr/local/sbin
+
+  if ! [ -x "$(command -v brew)" ]; then
+    echo 'Installing Homebrew'
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+
+  case "$COMMAND_TYPE" in
+  "update")
+    brew upgrade
+    brew bundle
+    ;;
+  *) brew bundle check || brew bundle ;;
+  esac
+}
+
+install_mackup() {
+  rm ~/.mackup.cfg
+  ln -s ~/.dotfiles/private/mackup/.mackup.cfg ~/.mackup.cfg
 }
 
 # --------------
