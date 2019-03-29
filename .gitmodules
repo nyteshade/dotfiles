@@ -1,3 +1,6 @@
 [submodule "dotfiles_private"]
 	path = private
 	url = git@github.com:codytwinton/dotfiles_private.git
+[submodule "sourcekit-lsp"]
+	path = sourcekit-lsp
+	url = git@github.com:apple/sourcekit-lsp.git
