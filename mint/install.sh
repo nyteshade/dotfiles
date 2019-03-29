@@ -25,6 +25,12 @@ install() {
 
 update() {
   install
+
+  cd sourcekit-lsp/ || exit
+  swift build
+  mv .build/debug/sourcekit-lsp /usr/local/bin
+
+  cd ../ || exit
 }
 
 # --------------
