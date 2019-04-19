@@ -150,15 +150,6 @@ Run:
 chsh -s /usr/local/bin/bash
 ```
 
-Check to ensure this worked properly:
-
-```sh
-$ echo $BASH_VERSION
-
-# You should see something like this
-5.0.3(1)-release
-```
-
 ## Apps
 
 ### VSCode

@@ -27,6 +27,8 @@ main() {
 
   git submodule update --init
 
+  echo "Bash version: $BASH_VERSION"
+
   install_homebrew
   install_mackup
 
