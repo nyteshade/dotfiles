@@ -31,6 +31,7 @@ main() {
 
   install_homebrew
   install_mackup
+  install_git_completion
 
   local install_paths=(
     "ruby"
@@ -88,6 +89,12 @@ install_homebrew() {
 install_mackup() {
   rm ~/.mackup.cfg
   ln -s ~/.dotfiles/private/mackup/.mackup.cfg ~/.mackup.cfg
+}
+
+install_git_completion() {
+  curl \
+    -o ~/.dotfiles/git/git-completion.bash \
+    https://raw.githubusercontent.com/git/git/v2.17.1/contrib/completion/git-completion.bash
 }
 
 # --------------
