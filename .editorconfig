@@ -10,3 +10,7 @@ insert_final_newline = true
 
 [*.py]
 indent_size = 4
+
+[.gitconfig]
+indent_style = unset
+indent_size = unset
