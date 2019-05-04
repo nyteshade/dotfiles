@@ -22,6 +22,7 @@ brew "rbenv"
 brew "ruby", link: true
 brew "shellcheck"
 brew "shfmt"
+brew "thrift"
 brew "xctool"
 brew "vitorgalvao/tiny-scripts/cask-repair"
 cask "alfred"
