@@ -17,9 +17,10 @@ brew "mackup"
 brew "mas"
 brew "mint"
 brew "node"
+brew "node@10", link: true
 brew "ruby-build"
 brew "rbenv"
-brew "ruby", link: true
+brew "ruby"
 brew "shellcheck"
 brew "shfmt"
 brew "thrift"
@@ -41,6 +42,7 @@ cask "workplace-chat"
 mas "com.agilebits.onepassword7", id: 1333542190
 mas "com.apple.dt.Xcode", id: 497799835
 mas "com.apple.garageband10", id: 682658836
+mas "com.apple.iWork.Keynote", id: 409183694
 mas "com.atlassian.trello", id: 1278508951
 mas "com.betafish.adblock-mac", id: 1402042596
 mas "com.pvieito.OverPicture", id: 1188020834
