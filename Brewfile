@@ -18,6 +18,7 @@ brew "mas"
 brew "mint"
 brew "node"
 brew "node@10", link: true
+brew "protobuf"
 brew "ruby-build"
 brew "rbenv"
 brew "ruby"
