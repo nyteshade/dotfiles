@@ -23,6 +23,7 @@ install() {
   local global_deps=(
     "@google/clasp"
     "bash-language-server"
+    "eslint"
     "prettier"
   )
 
