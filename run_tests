@@ -1,6 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/sh
 #
 # Testing the run value
+#
+# shellcheck disable=SC2039
 
 # --------------
 # Imports

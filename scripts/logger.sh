@@ -1,6 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/sh
 #
 # Logging Functionality
+#
+# shellcheck disable=SC2039
 
 ################
 # Functions

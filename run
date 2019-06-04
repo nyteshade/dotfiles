@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 #
 # Main Script
 #
@@ -27,40 +27,30 @@ main() {
 
   git submodule update --init
 
-  echo "Bash version: $BASH_VERSION"
-
+  echo 'Setting up Homebrew'
   install_homebrew
+
+  echo 'Setting up ZSH'
+  install_zsh
+
+  echo 'Setting up macOS Prefs'
+  install_macos_prefs
+
+  echo 'Setting up Mackup'
   install_mackup
-  install_git_completion
 
-  local install_paths=(
-    "ruby"
-  )
+  echo 'Setting up Ruby'
+  install_ruby
 
-  for install_path in "${install_paths[@]}"; do
-    echo ''
-    echo "Running ${install_path}/install.sh"
-    sh "${install_path}/install.sh" "$1"
-  done
+  echo 'Setting up Mint'
+  install_mint
 
-  # find the installers and run them iteratively
-  while read -r -d '' installer; do
-    local already_installed=""
-    for install_path in "${install_paths[@]}"; do
-      if [[ $installer == *"$install_path"* ]]; then
-        already_installed="$install_path"
-        break
-      fi
-    done
+  echo 'Setting up NPM'
+  install_npm
 
-    if [[ -n $already_installed ]]; then
-      continue
-    fi
-
-    echo ''
-    echo "Running ${installer}"
-    sh "${installer}" "$1"
-  done < <(find . -name "*install.sh" -print0)
+  echo 'Setting up Prettier'
+  rm ~/.prettierrc.yml
+  ln -s ~/.dotfiles/.prettierrc.yml ~/.prettierrc.yml
 }
 
 # --------------
@@ -68,15 +58,12 @@ main() {
 # --------------
 
 install_homebrew() {
-  echo 'Setting up Homebrew'
-
   sudo chown -R "$(whoami)" \
     /usr/local/bin \
     /usr/local/lib \
     /usr/local/sbin
 
   if ! [ -x "$(command -v brew)" ]; then
-    echo 'Installing Homebrew'
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 
@@ -89,15 +76,97 @@ install_homebrew() {
   esac
 }
 
+install_zsh() {
+  if ! [ -d ~/.oh-my-zsh ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  fi
+}
+
+install_macos_prefs() {
+  # Screenshots
+
+  SCREENSHOTDIR="${HOME}/Pictures/Screenshots"
+
+  test -d "${SCREENSHOTDIR}" || mkdir "${SCREENSHOTDIR}"
+
+  defaults write com.apple.screencapture location "$SCREENSHOTDIR"
+
+  # Dock Prefs
+
+  defaults write com.apple.dock autohide -bool yes
+  defaults write com.apple.dock autohide-delay -float 0
+  defaults write com.apple.dock autohide-time-modifier -float 0.14999999999999999
+
+  # Keyboard
+
+  defaults write -g InitialKeyRepeat -int 15
+  defaults write -g KeyRepeat -int 2
+
+  killall Dock
+
+  # Xcode
+
+  if [[ "$(xcode-select -p)" == "" ]]; then
+    xcode-select --install
+  fi
+}
+
+install_ruby() {
+  local ruby_version
+  ruby_version=$(cat ".ruby-version")
+
+  rbenv install --skip-existing "$ruby_version"
+  rbenv global "$ruby_version"
+
+  if [ ! "$(gem list bundler -i)" ]; then
+    gem install bundler
+  fi
+
+  if [[ $COMMAND_TYPE == "update" ]]; then
+    gem install bundler
+    bundle update
+  fi
+
+  bundle install --system
+}
+
+install_mint() {
+  mint bootstrap
+
+  while read -r mint_dep; do
+    mint install "$mint_dep"
+  done <Mintfile
+
+  if [[ $COMMAND_TYPE == "update" ]]; then
+    install
+
+    cd sourcekit-lsp/ || exit
+    swift build
+    mv .build/debug/sourcekit-lsp /usr/local/bin
+
+    cd ../ || exit
+  fi
+}
+
 install_mackup() {
   rm ~/.mackup.cfg
   ln -s ~/.dotfiles/private/mackup/.mackup.cfg ~/.mackup.cfg
 }
 
-install_git_completion() {
-  curl \
-    -o ~/.dotfiles/git/git-completion.bash \
-    https://raw.githubusercontent.com/git/git/v2.17.1/contrib/completion/git-completion.bash
+install_npm() {
+  if [[ $COMMAND_TYPE == "update" ]]; then
+    npm install -g npm
+  fi
+
+  for dep in "${NPM_DEPS[@]}"; do
+    if npm list -g "$dep" | grep -q "$dep"; then
+      if [[ $COMMAND_TYPE != "update" ]]; then
+        continue
+      fi
+    fi
+
+    npm install "$dep" -g
+  done
 }
 
 # --------------
