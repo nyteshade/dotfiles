@@ -15,7 +15,7 @@ brew "python"
 brew "mackup"
 brew "mas"
 brew "mint"
-brew "node"
+brew "node", link: false
 brew "node@10", link: true
 brew "ruby-build"
 brew "rbenv"
