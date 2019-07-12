@@ -156,7 +156,24 @@ chsh -s /usr/local/bin/bash
 
 ### Brewfile Apps
 
+## Uninstalling from Mac
+
+When changing to a new Mac and/or getting rid of a Mac, you'll need to remove everything from you laptop. Here's the steps to take:
+
+### Sign Out of Applications
+
+- Boom 3D Registration
+- iTunes
+- iMessage
+- FaceTime
+- iCloud & Find My Mac
+
+### Erase Mac
+
+Reformat HD and install fresh OS
+
 ## Acknowledgements
 
 - [github.com/mscoutermarsh/dotfiles](https://github.com/mscoutermarsh/dotfiles)
 - [gorails.com/setup/osx/10.14-mojave](https://gorails.com/setup/osx/10.14-mojave)
+- [imore.com/how-to-prepare-mac-for-sale](https://www.imore.com/how-to-prepare-mac-for-sale)
