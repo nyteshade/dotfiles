@@ -1,0 +1,72 @@
+{
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.detectIndentation": true,
+  "editor.fontSize": 13,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.maxColumn": 80,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80, 120],
+  "emmet.includeLanguages": {
+    "jekyll": "html"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.podspec": "ruby",
+    ".clang-format": "yaml",
+    "CODEOWNERS": "ignore"
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true
+  },
+  "git.autofetch": true,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "json.schemas": [
+    {
+      "fileMatch": ["*openapi.json"],
+      "url": "https://raw.githubusercontent.com/kogosoftwarellc/open-api/master/packages/openapi-schema-validator/resources/openapi-3.0.json"
+    },
+    {
+      "fileMatch": ["*resume.json"],
+      "url": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json"
+    }
+  ],
+  "markdown.extension.toc.levels": "2..6",
+  "markdown.extension.toc.unorderedList.marker": "-",
+  "markdownlint.config": {
+    "MD002": false,
+    "MD024": false,
+    "MD041": false
+  },
+  "prettier.disableLanguages": ["yml"],
+  "shellcheck.customArgs": ["-x"],
+  "shellformat.flag": "-s -bn",
+  "sync.askGistName": false,
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.forceDownload": false,
+  "sync.gist": "b692ffdc0bec9fd495edc8fa2fd18e72",
+  "sync.quietSync": false,
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.shell.osx": "zsh",
+  "window.nativeTabs": true,
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "yaml.format.enable": true,
+  "yaml.schemas": {
+    "http://json.schemastore.org/prettierrc": "/.prettierrc.yml",
+    "http://json.schemastore.org/resume": "/*resume.yml"
+  },
+  "yaml.schemaStore.enable": true
+}

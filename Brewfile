@@ -12,7 +12,6 @@ brew "git"
 brew "go"
 brew "openssl"
 brew "python"
-brew "mackup"
 brew "mas"
 brew "mint"
 brew "node", link: false
@@ -35,9 +34,7 @@ cask "iterm2"
 cask "java"
 cask "postman"
 cask "sourcetree"
-cask "typora"
 cask "visual-studio-code"
-cask "workplace-chat"
 mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
 mas "Be Focused", id: 973134470

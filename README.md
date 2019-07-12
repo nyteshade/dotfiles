@@ -122,14 +122,6 @@ chmod +x run_tests
 ./run_tests
 ```
 
-## Mackup
-
-Run:
-
-```sh
-mackup restore
-```
-
 ## Bash Setup
 
 ### Update `/etc/shells`
@@ -167,5 +159,4 @@ chsh -s /usr/local/bin/bash
 ## Acknowledgements
 
 - [github.com/mscoutermarsh/dotfiles](https://github.com/mscoutermarsh/dotfiles)
-- [github.com/lra/mackup](https://github.com/lra/mackup)
 - [gorails.com/setup/osx/10.14-mojave](https://gorails.com/setup/osx/10.14-mojave)

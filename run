@@ -27,6 +27,12 @@ main() {
 
   git submodule update --init
 
+  rm ~/.gitconfig
+  ln -s ~/.dotfiles/resources/.gitconfig ~/.gitconfig
+
+  echo 'Setting up Resources'
+  install_resources
+
   echo 'Setting up Homebrew'
   install_homebrew
 
@@ -35,9 +41,6 @@ main() {
 
   echo 'Setting up macOS Prefs'
   install_macos_prefs
-
-  echo 'Setting up Mackup'
-  install_mackup
 
   echo 'Setting up Ruby'
   install_ruby
@@ -56,6 +59,39 @@ main() {
 # --------------
 # Installs
 # --------------
+
+install_resources() {
+  rm ~/.zshrc
+  ln -s ~/.dotfiles/resources/.zshrc ~/.zshrc
+
+  rm ~/.bashrc
+  ln -s ~/.dotfiles/resources/.bashrc ~/.bashrc
+
+  rm ~/.bash_profile
+  ln -s ~/.dotfiles/resources/.bash_profile ~/.bash_profile
+
+  rm ~/.vimrc
+  ln -s ~/.dotfiles/resources/.vimrc ~/.vimrc
+
+  rm ~/.netrc
+  ln -s ~/.dotfiles/private/resources/.netrc ~/.netrc
+
+  rm ~/Library/Application\ Support/Code/User/settings.json
+  ln -s ~/.dotfiles/resources/Library/Application\ Support/Code/User/settings.json \
+    ~/Library/Application\ Support/Code/User/settings.json
+
+  rm ~/Library/Application\ Support/SourceTree/browser.plist
+  ln -s ~/.dotfiles/resources/Library/Application\ Support/SourceTree/browser.plist \
+    ~/Library/Application\ Support/SourceTree/browser.plist
+
+  rm ~/Library/Preferences/com.apple.Terminal.plist
+  ln -s ~/.dotfiles/resources/Library/Preferences/com.apple.Terminal.plist \
+    ~/Library/Preferences/com.apple.Terminal.plist
+
+  rm ~/Library/Preferences/com.googlecode.iterm2
+  ln -s ~/.dotfiles/resources/Library/Preferences/com.googlecode.iterm2 \
+    ~/Library/Preferences/com.googlecode.iterm2
+}
 
 install_homebrew() {
   sudo chown -R "$(whoami)" \
@@ -144,11 +180,6 @@ install_mint() {
 
     cd ../ || exit
   fi
-}
-
-install_mackup() {
-  rm ~/.mackup.cfg
-  ln -s ~/.dotfiles/private/mackup/.mackup.cfg ~/.mackup.cfg
 }
 
 install_npm() {
