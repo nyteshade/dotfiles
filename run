@@ -70,6 +70,7 @@ install_resources() {
     '.bash_profile'
     '.vimrc'
     '.zshrc'
+    '.ssh/config'
     'Library/Application Support/Code/User/settings.json'
     'Library/Application Support/SourceTree/browser.plist'
     'Library/Preferences/com.apple.Terminal.plist'
