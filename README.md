@@ -29,8 +29,10 @@ Config Files and Mac Setup
 
 - Keyboard
   - Keyboard Backlight
-- Modifier Keys
-  - Caps Lock Key: Escape
+  - Modifier Keys
+    - Caps Lock Key: Escape
+- Text
+  - Use smart quotes and dashes: False
 - Shortcuts
   - Show Spotlight search: ⌃Space
   - App Shortcuts
