@@ -100,6 +100,8 @@ Run the following commands (replace your email)
 ```sh
 ssh-keygen -t rsa -C "me@example.com"
 cat ~/.ssh/id_rsa.pub
+
+ssh-add -K ~/.ssh/[your-private-key]
 ```
 
 Paste the result into [GitHub SSH Keys](https://github.com/settings/keys) and confirm it's working:
@@ -122,26 +124,6 @@ chmod +x run
 
 chmod +x run_tests
 ./run_tests
-```
-
-## Bash Setup
-
-### Update `/etc/shells`
-
-Run:
-
-```sh
-sudo vim /etc/shells
-```
-
-And add `/usr/local/bin/bash` to the end of the file.
-
-### Change Default Shell
-
-Run:
-
-```sh
-chsh -s /usr/local/bin/bash
 ```
 
 ## Apps
