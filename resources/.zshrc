@@ -1,7 +1,7 @@
 # shellcheck disable=SC2148
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/codytwinton/.oh-my-zsh"
+export ZSH="/Users/cwinton/.oh-my-zsh"
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"

@@ -8,8 +8,8 @@
 # Globals
 # --------------
 
-readonly DOTFILES_ROOT=$(realpath "$(dirname "$(dirname "${BASH_SOURCE[0]}")")")
-export DOTFILES_ROOT
+# readonly DOTFILES_ROOT=$(realpath "$(dirname "$(dirname "${BASH_SOURCE[0]}")")")
+# export DOTFILES_ROOT
 
 readonly NPM_DEPS=(
   "@google/clasp"

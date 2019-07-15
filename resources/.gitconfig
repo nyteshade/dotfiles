@@ -2,7 +2,7 @@
 	name = Cody Winton
 	email = cody.t.winton@gmail.com
 [core]
-	excludesfile = /Users/codytwinton/.gitignore_global
+	excludesfile = /Users/cwinton/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

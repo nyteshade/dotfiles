@@ -27,17 +27,14 @@ main() {
 
   git submodule update --init
 
-  rm ~/.gitconfig
-  ln -s ~/.dotfiles/resources/.gitconfig ~/.gitconfig
-
-  echo 'Setting up Resources'
-  install_resources
-
   echo 'Setting up Homebrew'
   install_homebrew
 
   echo 'Setting up ZSH'
   install_zsh
+
+  echo 'Setting up Resources'
+  install_resources
 
   echo 'Setting up macOS Prefs'
   install_macos_prefs
@@ -50,10 +47,6 @@ main() {
 
   echo 'Setting up NPM'
   install_npm
-
-  echo 'Setting up Prettier'
-  rm ~/.prettierrc.yml
-  ln -s ~/.dotfiles/.prettierrc.yml ~/.prettierrc.yml
 }
 
 # --------------
@@ -61,36 +54,49 @@ main() {
 # --------------
 
 install_resources() {
-  rm ~/.zshrc
-  ln -s ~/.dotfiles/resources/.zshrc ~/.zshrc
 
-  rm ~/.bashrc
-  ln -s ~/.dotfiles/resources/.bashrc ~/.bashrc
+  readonly dev_configs=(
+    '.prettierrc.yml'
+  )
 
-  rm ~/.bash_profile
-  ln -s ~/.dotfiles/resources/.bash_profile ~/.bash_profile
+  for config in "${dev_configs[@]}"; do
+    rm ~/"$config" || echo "Installing $config"
+    ln -s ~/.dotfiles/"$config" ~/"$config"
+  done
 
-  rm ~/.vimrc
-  ln -s ~/.dotfiles/resources/.vimrc ~/.vimrc
+  readonly resource_configs=(
+    '.gitconfig'
+    '.bashrc'
+    '.bash_profile'
+    '.vimrc'
+    '.zshrc'
+    'Library/Application Support/Code/User/settings.json'
+    'Library/Application Support/SourceTree/browser.plist'
+    'Library/Preferences/com.apple.Terminal.plist'
+    'Library/Preferences/com.googlecode.iterm2'
+  )
 
-  rm ~/.netrc
-  ln -s ~/.dotfiles/private/resources/.netrc ~/.netrc
+  for config in "${resource_configs[@]}"; do
+    local dir_name
+    dir_name=$(dirname "$config")
+    test -d "${dir_name}" || mkdir -p "${dir_name}"
 
-  rm ~/Library/Application\ Support/Code/User/settings.json
-  ln -s ~/.dotfiles/resources/Library/Application\ Support/Code/User/settings.json \
-    ~/Library/Application\ Support/Code/User/settings.json
+    rm ~/"$config" || echo "Installing $config"
+    ln -s ~/.dotfiles/resources/"$config" ~/"$config"
+  done
 
-  rm ~/Library/Application\ Support/SourceTree/browser.plist
-  ln -s ~/.dotfiles/resources/Library/Application\ Support/SourceTree/browser.plist \
-    ~/Library/Application\ Support/SourceTree/browser.plist
+  readonly private_configs=(
+    '.netrc'
+  )
 
-  rm ~/Library/Preferences/com.apple.Terminal.plist
-  ln -s ~/.dotfiles/resources/Library/Preferences/com.apple.Terminal.plist \
-    ~/Library/Preferences/com.apple.Terminal.plist
+  for config in "${private_configs[@]}"; do
+    local dir_name
+    dir_name=$(dirname "$config")
+    test -d "${dir_name}" || mkdir -p "${dir_name}"
 
-  rm ~/Library/Preferences/com.googlecode.iterm2
-  ln -s ~/.dotfiles/resources/Library/Preferences/com.googlecode.iterm2 \
-    ~/Library/Preferences/com.googlecode.iterm2
+    rm ~/"$config" || echo "Installing $config"
+    ln -s ~/.dotfiles/private/resources/"$config" ~/"$config"
+  done
 }
 
 install_homebrew() {
@@ -114,7 +120,7 @@ install_homebrew() {
 
 install_zsh() {
   if ! [ -d ~/.oh-my-zsh ]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   fi
 }
 
