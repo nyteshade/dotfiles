@@ -63,7 +63,6 @@ plugins=(
   git
   mercurial
   node
-  npm
   osx
   vscode
 )

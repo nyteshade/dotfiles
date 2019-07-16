@@ -12,6 +12,7 @@ brew "git"
 brew "go"
 brew "openssl"
 brew "python"
+brew "pipenv"
 brew "mas"
 brew "mint"
 brew "node", link: false
