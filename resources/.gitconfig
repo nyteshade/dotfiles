@@ -35,3 +35,6 @@
 
 [includeIf "gitdir:~/Developer/Facebook/"]
 	path = ~/.dotfiles/resources/.gitconfig-facebook
+
+[includeIf "gitdir:~/Developer/PayPal/"]
+	path = ~/.dotfiles/resources/.gitconfig-paypal
