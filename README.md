@@ -161,3 +161,5 @@ Reformat HD and install fresh OS
 - [github.com/mscoutermarsh/dotfiles](https://github.com/mscoutermarsh/dotfiles)
 - [gorails.com/setup/osx/10.14-mojave](https://gorails.com/setup/osx/10.14-mojave)
 - [imore.com/how-to-prepare-mac-for-sale](https://www.imore.com/how-to-prepare-mac-for-sale)
+- [stackoverflow.com/questions/19135867](https://stackoverflow.com/questions/19135867/what-is-pips-equivalent-of-npm-install-package-save-dev)
+- [pipenv.readthedocs.io/en/latest](https://pipenv.readthedocs.io/en/latest)
