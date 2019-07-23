@@ -166,8 +166,9 @@ install_ruby() {
   fi
 
   if [[ $COMMAND_TYPE == "update" ]]; then
+    gem update --system
     gem install bundler
-    bundle update
+    bundle update --bundler
   fi
 
   bundle install --system
