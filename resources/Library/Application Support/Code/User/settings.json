@@ -61,7 +61,6 @@
   "window.nativeTabs": true,
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Atom One Dark",
-  "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
   "yaml.schemas": {
