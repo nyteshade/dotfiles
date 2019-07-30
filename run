@@ -182,11 +182,12 @@ install_mint() {
   done <Mintfile
 
   if [[ $COMMAND_TYPE == "update" ]]; then
-    cd sourcekit-lsp/ || exit
-    swift build
-    mv .build/debug/sourcekit-lsp /usr/local/bin
+    echo "SourceKit-LSP"
+    #cd sourcekit-lsp/ || exit
+    #swift build
+    #mv .build/debug/sourcekit-lsp /usr/local/bin
 
-    cd ../ || exit
+    #cd ../ || exit
   fi
 }
 
