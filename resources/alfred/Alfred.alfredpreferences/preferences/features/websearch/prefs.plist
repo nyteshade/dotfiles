@@ -4,45 +4,6 @@
 <dict>
 	<key>customSites</key>
 	<dict>
-		<key>077D7055-0D2D-4C86-BFB1-0BC58DFE7E3E</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>fbobjc</string>
-			<key>text</key>
-			<string>Code Search[fbobjc] for {query}</string>
-			<key>url</key>
-			<string>https://our.internmc.facebook.com/intern/codesearch/?q=repo%3Afbobjc%20{query}</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
-		<key>1D4FC450-DC9E-47BA-8E38-F87BE95C6EC9</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>www</string>
-			<key>text</key>
-			<string>Code Search[www] for {query}</string>
-			<key>url</key>
-			<string>https://our.intern.facebook.com/intern/codesearch/?q=repo%3Awww%20{query}</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
-		<key>1E4F1B5A-67D6-45FA-BE0B-31713615F607</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>businesssdk</string>
-			<key>text</key>
-			<string>Code Search[business-sdk] for {query}</string>
-			<key>url</key>
-			<string>https://our.internmc.facebook.com/intern/codesearch/?q=repo%3Abusiness-sdk%20{query}</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
 		<key>33B0F74B-F6C9-4EC5-9AB7-0C26D0388BC1</key>
 		<dict>
 			<key>enabled</key>
@@ -61,11 +22,11 @@
 			<key>enabled</key>
 			<true/>
 			<key>keyword</key>
-			<string>fbsource</string>
+			<string>go</string>
 			<key>text</key>
-			<string>Code Search[fbsource] for {query}</string>
+			<string>GO/{query}</string>
 			<key>url</key>
-			<string>https://our.internmc.facebook.com/intern/bunny/?q=repo%3Afbsource%20{query}</string>
+			<string>https://go/{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -110,19 +71,6 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
-		<key>9B0975D6-B19E-4636-8859-220DF5269D1C</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>cs</string>
-			<key>text</key>
-			<string>Code Search[monorepo] for {query}</string>
-			<key>url</key>
-			<string>https://our.internmc.facebook.com/intern/codesearch/?q={query}</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
 		<key>AFA16207-00A3-4E41-8883-2C548382B3BF</key>
 		<dict>
 			<key>enabled</key>
@@ -135,19 +83,6 @@
 			<string>Open Urban Dictionary for '{query}'</string>
 			<key>url</key>
 			<string>https://www.urbandictionary.com/define.php?term={query}</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
-		<key>D0F85982-2F2F-4626-B25F-AD8E331BCBBD</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>sv</string>
-			<key>text</key>
-			<string>Open Sitevar for '{query}'</string>
-			<key>url</key>
-			<string>https://our.intern.facebook.com/intern/bunny/?q=sv%20{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
