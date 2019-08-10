@@ -8,11 +8,16 @@
   "editor.formatOnSave": true,
   "editor.minimap.maxColumn": 80,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [80, 100, 120],
+  "editor.rulers": [
+    80,
+    100,
+    120
+  ],
   "emmet.includeLanguages": {
     "jekyll": "html"
   },
   "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "default",
   "files.associations": {
     "*.podspec": "ruby",
     ".clang-format": "yaml",
@@ -29,11 +34,15 @@
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "json.schemas": [
     {
-      "fileMatch": ["*openapi.json"],
+      "fileMatch": [
+        "*openapi.json"
+      ],
       "url": "https://raw.githubusercontent.com/kogosoftwarellc/open-api/master/packages/openapi-schema-validator/resources/openapi-3.0.json"
     },
     {
-      "fileMatch": ["*resume.json"],
+      "fileMatch": [
+        "*resume.json"
+      ],
       "url": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json"
     }
   ],
@@ -44,8 +53,12 @@
     "MD024": false,
     "MD041": false
   },
-  "prettier.disableLanguages": ["yml"],
-  "shellcheck.customArgs": ["-x"],
+  "prettier.disableLanguages": [
+    "yml"
+  ],
+  "shellcheck.customArgs": [
+    "-x"
+  ],
   "shellformat.flag": "-s -bn",
   "sync.askGistName": false,
   "sync.autoDownload": false,
