@@ -1,4 +1,7 @@
 {
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -8,11 +11,15 @@
   "editor.formatOnSave": true,
   "editor.minimap.maxColumn": 80,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [
-    80,
-    100,
-    120
-  ],
+  "editor.rulers": [80, 100, 120],
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "cmd": "swiftlint autocorrect --format --path ${file}",
+        "match": "\\.swift$"
+      }
+    ]
+  },
   "emmet.includeLanguages": {
     "jekyll": "html"
   },
@@ -34,15 +41,11 @@
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "json.schemas": [
     {
-      "fileMatch": [
-        "*openapi.json"
-      ],
+      "fileMatch": ["*openapi.json"],
       "url": "https://raw.githubusercontent.com/kogosoftwarellc/open-api/master/packages/openapi-schema-validator/resources/openapi-3.0.json"
     },
     {
-      "fileMatch": [
-        "*resume.json"
-      ],
+      "fileMatch": ["*resume.json"],
       "url": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json"
     }
   ],
@@ -53,17 +56,14 @@
     "MD024": false,
     "MD041": false
   },
-  "prettier.disableLanguages": [
-    "yml"
-  ],
-  "shellcheck.customArgs": [
-    "-x"
-  ],
+  "prettier.disableLanguages": ["yml"],
+  "shellcheck.customArgs": ["-x"],
   "shellformat.flag": "-s -bn",
-  "sync.askGistName": false,
+  "swiftlint.enable": true,
   "sync.autoDownload": false,
   "sync.autoUpload": false,
   "sync.forceDownload": false,
+  "sync.forceUpload": true,
   "sync.gist": "b692ffdc0bec9fd495edc8fa2fd18e72",
   "sync.quietSync": false,
   "sync.removeExtensions": true,
@@ -80,8 +80,5 @@
     "http://json.schemastore.org/prettierrc": "/.prettierrc.yml",
     "http://json.schemastore.org/resume": "/*resume.yml"
   },
-  "yaml.schemaStore.enable": true,
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  "yaml.schemaStore.enable": true
 }
