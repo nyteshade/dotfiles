@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'bundler'
-gem 'cocoapods'
-gem 'github_changelog_generator'
-gem 'jazzy'
+gem 'cocoapods', '>= 1.7.5'
+gem 'github_changelog_generator', '>= 1.14.3'
+gem 'jazzy', '>= 0.10.0'
 gem 'jekyll'
 gem 'rufo'
 gem 'solargraph'
